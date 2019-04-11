@@ -22,7 +22,7 @@ class Story(Base):
     __tablename__ = "stories"
     id = Column(Integer, primary_key=True)
     title = Column(String)
-    story=Column(String)
+    the_story=Column(String)
     name=Column(String)
     age=Column(Integer)
     gender=Column(String)
