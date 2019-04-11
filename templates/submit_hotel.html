@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <title>One For All</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/vendor.css">
+    <link rel="stylesheet" href="../static/main.css">
+
+
+    <script src="../static/js/modernizr.js"></script>
+    <script src="../static/js/pace.min.js"></script>
+
+
+
+<title>
+  OFA
+</title>
+
+</head>
+
+<body id="top">
+
+    <section class="s-content s-content--narrow">
+
+        <div class="row">
+            <form id="cForm" method="post" action="/submit_hotel" enctype="multipart/form-data">
+                <fieldset>
+
+                    <div class="form-field">
+                        <input name="name" type="text" id="cName" class="full-width" placeholder="Name Of The Hotel">
+                    </div>
+
+                    <div class="form-field">
+                        <input name="hotel_date" type="text" id="cName" class="full-width" placeholder="The Date it is available">
+                    </div>
+
+                    <div class="message form-field">
+                    <textarea name="hotel_desc" id="cMessage" class="full-width" placeholder="Short Description Of The Hotel" ></textarea>
+                    </div>
+
+                    <div class="message form-field">
+                        <textarea name="price" id="cMessage" class="full-width" placeholder="The Price Of The Hotel" ></textarea>
+                    </div>
+
+                    <input type = "file" name = "file">
+
+                    <button type="submit" class="submit btn btn--primary full-width">Submit</button>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/plugins.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
