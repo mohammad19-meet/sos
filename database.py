@@ -15,3 +15,8 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+def auth_user(user_username, user_password):
+    session = DBSession()
+    user = session.query(Student).filter_by(username = user_username, password= user_password).first()
+    print(user)
+    return user
