@@ -43,7 +43,7 @@ class Event(Base):
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
-    name = Column(String)
-    username = Column(String, unique=True)
+    username = Column(String)
     password = Column(String)
     role = Column(Integer)
+
