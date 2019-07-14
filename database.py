@@ -22,4 +22,16 @@ def add_user(username,password,role):
     session.add(user_object)
     session.commit()
 
+def add_story(name, title, the_story):
+	story_object= Story(name=name, title=title, the_story=the_story)
+	session.add(story_object)
+	session.commit()
+	
+def story_by_name(name):
+	session = DBSession()
+	stories= seesion.query(Story).filter_by(name=username).all()
+	return stories
+
+
+
 # add_user("user", "pass", 0)

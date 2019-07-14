@@ -24,10 +24,6 @@ class Story(Base):
     title = Column(String)
     the_story=Column(String)
     name=Column(String)
-    age=Column(Integer)
-    gender=Column(String)
-    place=Column(String)
-    summery=Column(String)
 
 class Event(Base):
     __tablename__ = "events"
