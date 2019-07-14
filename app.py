@@ -6,7 +6,7 @@ app.secret_key = "jrg;quoeiohqei833y2y8h"
 @app.route("/", methods=['GET','POST'])
 def home():
     if request.method == 'GET':
-        return render_template("index.html")
+        return render_template("index1.html")
     else:
         username = request.form['username']
         password = request.form['password']
