@@ -4,11 +4,11 @@
 
 
     <title>Shout Out Strong</title>
-    <link rel="stylesheet" href="../static/css/style_profile.css">
+    
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="../static/css/style_profile.css">
 
 
 <title>
@@ -18,13 +18,13 @@
 </head>
 
 <body>
-    <p>Hello {{user.username}}</p>
-    <p>here are your stories</p>
+    <p id="title">Hello {{user.username}}</p>
+    <p id="text">here are your stories</p>
      {% for story in stories%}
       <div class="card">
         <div class="card-body">
         <h5 class="card-title">{{story.title}}</h5>
-        <p class="card-text">{{story.summery}}</p>
+        <p class="card-text">{{story.summary}}</p>
         <a href="#" class="btn btn-primary">open</a>
         </div>
     </div>

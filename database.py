@@ -33,7 +33,7 @@ def story_by_name(name):
 	stories= session.query(Story).filter_by(name=name).all()
 	return stories
 
-add_story("shelly", "story 1", "hey my name is ok")
-add_user("shelly", 1234, 0)
+
+
 
 # add_user("user", "pass", 0)
