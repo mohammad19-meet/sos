@@ -24,6 +24,7 @@ class Story(Base):
     title = Column(String)
     the_story=Column(String)
     name=Column(String)
+    summary=Column(String)
 
 class Event(Base):
     __tablename__ = "events"

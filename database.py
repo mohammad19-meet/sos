@@ -11,7 +11,7 @@ session = DBSession()
 
 def auth_user(username, password):
     session = DBSession()
-    user = session.query(Student).filter_by(username = username, password= password).first()
+    user = session.query(User).filter_by(username = username, password= password).first()
     print(user)
     return user
 
@@ -23,15 +23,17 @@ def add_user(username,password,role):
     session.commit()
 
 def add_story(name, title, the_story):
-	story_object= Story(name=name, title=title, the_story=the_story)
+	summary=the_story[0:20]
+	story_object= Story(name=name, title=title, the_story=the_story, summary=summary)
 	session.add(story_object)
 	session.commit()
-	
+
 def story_by_name(name):
 	session = DBSession()
-	stories= seesion.query(Story).filter_by(name=username).all()
+	stories= session.query(Story).filter_by(name=name).all()
 	return stories
 
-
+add_story("shelly", "story 1", "hey my name is ok")
+add_user("shelly", 1234, 0)
 
 # add_user("user", "pass", 0)

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, request, session, flash
-from database import auth_user, add_user, add_story
+from database import auth_user, add_user, add_story, story_by_name
 app = Flask(__name__)
 app.secret_key = "jrg;quoeiohqei833y2y8h"
 
@@ -24,6 +24,12 @@ def home():
 @app.route("/home")
 def home1():
     return render_template("home.html")
+#@app.route("/profile/<int:id>")
+@app.route("/profile")
+def profile():
+    user=auth_user("shelly",1234)
+    stories=story_by_name("shelly")
+    return render_template("profile.html", user=user, stories=stories)
 @app.route("/signup", methods=['GET', 'POST'])
 def user_signup():
     if request.method == 'GET':
