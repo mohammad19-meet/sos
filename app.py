@@ -6,7 +6,7 @@ app.secret_key = "jrg;quoeiohqei833y2y8h"
 @app.route("/", methods=['GET','POST'])
 def home():
     if request.method == 'GET':
-        return render_template("index1.html")
+        return render_template("index.html")
     else:
         username = request.form['username']
         password = request.form['password']
@@ -21,6 +21,9 @@ def home():
         return redirect(url_for("home"))
     return render_template("index.html")
 
+@app.route("/home")
+def home1():
+    return render_template("home.html")
 @app.route("/signup", methods=['GET', 'POST'])
 def user_signup():
     if request.method == 'GET':
@@ -37,6 +40,20 @@ def user_signup():
         # check if the post request has the file part
         
         return redirect(url_for("home"))
+@app.route("/signin", methods=['GET', 'POST'])
+def signin():
+    if request.method== 'GET':
+        return render_template("sign_in.html")
+    else:
+        username = request.form['username']
+        password = request.form['password']
+        user=auth_user(username,password)
+        session['user_object'] = True
+        session["username"] = username
+
+        return redirect(url_for("home"))
+
+
 
 @app.route("/submit", methods=['GET', 'POST'])
 def submite_story():
@@ -45,9 +62,12 @@ def submite_story():
     else:
         title= request.form['title']
         story= request.form['story']
-        name=session["username"]
+        name="gorge"
         add_story(name,title,story)
-        return redirect(url_for("submit"))
+        return render_template("thank.html")
+@app.route("/thank")
+def thank():
+    return render_template("thank.html")
 
 
 

@@ -34,7 +34,6 @@ class Event(Base):
     place=Column(String)
     info=Column(String)
     picture=Column(String)
-    is_coming=Column(Boolean)
 
 class User(Base):
     __tablename__ = "users"
