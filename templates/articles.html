@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Stories</h1>
+  <ul class="list-group">
+    {% for story in pendingStories %}
+    <li class="list-group-item">
+      <a href="stories/{{story.id}}">{{story.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
