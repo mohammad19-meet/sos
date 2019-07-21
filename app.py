@@ -8,10 +8,10 @@ from functools import wraps
 app = Flask(__name__)
 
 # Config MySQL
-app.config['MYSQL_HOST'] = 'eu-cdbr-west-02.cleardb.net'
-app.config['MYSQL_USER'] = 'b0dcdf545c8c4f'
-app.config['MYSQL_PASSWORD'] = '5f8c4e91'
-app.config['MYSQL_DB'] = 'heroku_1e91302d605fc25'
+app.config['MYSQL_HOST'] = 'jfrpocyduwfg38kq.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
+app.config['MYSQL_USER'] = 'mp9hs1dcvjg4mvnh'
+app.config['MYSQL_PASSWORD'] = 'btwisl04fdsflmyo'
+app.config['MYSQL_DB'] = 'alks4hus7g3t47q8'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
