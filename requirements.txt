@@ -14,3 +14,4 @@ Werkzeug==0.14.1
 wheel==0.24.0
 MySQL-python==1.2.5
 configparser==3.7.4
+Flask-MySQLdb==0.2.0
