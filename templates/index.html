@@ -199,7 +199,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px"><a href="/dashboard" class="btn btn-med btn-color">DASHBOARD</a> </div>
+                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px; margin-left: 220px"><a href="/dashboard" class="btn btn-med btn-color">DASHBOARD</a> </div>
             {% else %}
             <!-- LAYER NR. 4 -->
             <div class="tp-caption skewfromright tp-resizeme" 
@@ -213,7 +213,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px"><a href="#" class="btn btn-med btn-color">REGISTER</a>
+                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px"><a href="/register" class="btn btn-med btn-color">REGISTER</a>
             </div>
 
             <div class="tp-caption skewfromright tp-resizeme" 
@@ -227,7 +227,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px"><a href="#" class="btn btn-med btn-color">LOGIN</a> 
+                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; margin-top: 200px"><a href="/login" class="btn btn-med btn-color">LOGIN</a> 
             </div>
             {% endif %}
             
@@ -352,9 +352,10 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 6; font-size:30px; color:#000; max-width: auto; max-height: auto; white-space: nowrap;">Survivors sharing their sexual assualt stories </div>
+                style="z-index: 6; font-size:40px; color:#000; max-width: auto; max-height: auto; white-space: nowrap;">Survivors sharing their sexual assualt stories </div>
             
             <!-- LAYER NR. 3 -->
+            {% if session.logged_in %}
             <div class="tp-caption skewfromleft tp-resizeme" 
                 data-x="center" data-hoffset="-120" 
                 data-y="center" data-voffset="100" 
@@ -366,8 +367,22 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#." class="btn btn-med btn-color">ADD A STORY</a> </div>
-            
+                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href="/add_story" class="btn btn-med btn-color">ADD A STORY</a> </div>
+
+            {% else %}
+            <div class="tp-caption skewfromleft tp-resizeme" 
+                data-x="center" data-hoffset="-120" 
+                data-y="center" data-voffset="100" 
+                data-speed="500" 
+                data-start="2500" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href="/login" class="btn btn-med btn-color">ADD A STORY</a> </div>
+            {% endif %}
             <!-- LAYER NR. 4 -->
             <div class="tp-caption skewfromright tp-resizeme" 
                 data-x="center" data-hoffset="120" 
@@ -380,7 +395,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#" class="btn btn-med btn-color">GO TO STORIES</a> </div>
+                style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;"><a href="/stories" class="btn btn-med btn-color">GO TO STORIES</a> </div>
           </li>
         </ul>
       </div>
@@ -400,10 +415,10 @@
           
           <!-- Intro Text -->
           <div class="col-md-9">
-            <div class="heading-block no-margin"> <span class="margin-bottom-10 animate fadeInUp" data-wow-delay="0.5s">Welcome The ZAP - Best solution for Creative Website</span>
-              <h2 class="margin-bottom-30 animate fadeInDown" data-wow-delay="0.5s">Awesome multi-concept theme</h2>
+            <div class="heading-block no-margin"> <span class="margin-bottom-10 animate fadeInUp" data-wow-delay="0.5s">Welcome to SOS</span>
+              <h2 class="margin-bottom-30 animate fadeInDown" data-wow-delay="0.5s">A nonprofit organization created to fight sexual assault in the region.</h2>
             </div>
-            <p class="animate fadeIn" data-wow-delay="0.5s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+            <p class="animate fadeIn" data-wow-delay="0.5s">We are leading a movement that will mainly focus on raising the awareness around sexusal assaults and creating a strong and united front that will help reduce the problem and hopefully ending it. Our goal is to make people think about their actions and reconsider their legitimacy. <br> <br>We are achieving this goal by:</p>
             
             <!-- Icon Row -->
             <div class="row margin-top-30 animate fadeInUp" data-wow-delay="0.5s"> 
@@ -413,7 +428,7 @@
                 <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-light ib-small">
                   <div class="ib-icon"> <i class="fa fa-diamond"></i> </div>
                   <div class="ib-info">
-                    <h6>Unique Design</h6>
+                    <h6>Lectures in school</h6>
                   </div>
                 </div>
               </div>
@@ -421,14 +436,14 @@
               <!-- Icon -->
               <div class="col-md-4">
                 <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-light ib-small">
-                  <div class="ib-icon"> <i class="fa fa-instagram"></i> </div>
+                  <div class="ib-icon" > <i class="fa fa-instagram" ></i> </div>
                   <div class="ib-info">
-                    <h6>Photography</h6>
+                    <h6 >Social Media</h6>
                   </div>
                 </div>
               </div>
               
-              <!-- Icon -->
+              <!-- Icon 
               <div class="col-md-4">
                 <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-light ib-small">
                   <div class="ib-icon"> <i class="fa fa-magic"></i> </div>
@@ -438,8 +453,9 @@
                 </div>
               </div>
             </div>
+            -->
             <!-- Icon --> 
-            <a href="#." class="btn btn-large dark-border font-normal margin-top-80 letter-space-1 animate fadeInUp" data-wow-delay="0.5s">More Services</a> </div>
+            <a href="#." class="btn btn-large dark-border font-normal margin-top-80 letter-space-1 animate fadeInUp" data-wow-delay="0.5s">More about our solution</a> </div>
         </div>
       </div>
     </section>
@@ -462,7 +478,7 @@
           <li class="tab-title filter-item"><a href="#." data-filter=".pf-bags">Bags</a></li>
           <li class="tab-title filter-item"><a href="#." data-filter=".pf-notebooks">Notebooks</a></li>
           <li class="tab-title filter-item"><a href="#." data-filter=".pf-stickers">Stickers</a></li>
-          <li class="tab-title filter-item"><a class="active" href="#." data-filter="*"><i class="fa fa-plus"></i></a></li>
+          <li class="tab-title filter-item"><a class="active" href="#." data-filter="*">All</a></li>
         </ul>
       </div>
       
@@ -474,7 +490,7 @@
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/hoodie.jpg"> </a> </div>
           <div class="portfolio-overlay">
             <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+              <h3><a href="#.">Blue sweater</a></h3>
             </div>
           </div>
         </article>
@@ -484,7 +500,7 @@
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/hoodiee.jpeg"> </a> </div>
           <div class="portfolio-overlay">
             <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+              <h3><a href="#.">Grey sweater</a></h3>
             </div>
           </div>
         </article>
@@ -493,8 +509,8 @@
         <article class="portfolio-item pf-pins">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/white_pin.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">White metal pin</a></h3>
             </div>
           </div>
         </article>
@@ -503,8 +519,8 @@
         <article class="portfolio-item pf-web-design pf-pins">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/black_pin.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Black metal pin</a></h3>
             </div>
           </div>
         </article>
@@ -513,8 +529,8 @@
         <article class="portfolio-item pf-bottles">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bottle_1.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Silver metal bottle</a></h3>
             </div>
           </div>
         </article>
@@ -523,8 +539,8 @@
         <article class="portfolio-item pf-bottles">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bottle_2.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Black metal bottle</a></h3>
             </div>
           </div>
         </article>
@@ -534,7 +550,7 @@
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bag_1.png"> </a> </div>
           <div class="portfolio-overlay">
             <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+              <h3><a href="#.">White sack bag</a></h3>
             </div>
           </div>
         </article>
@@ -544,7 +560,7 @@
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bag_2.png"> </a> </div>
           <div class="portfolio-overlay">
             <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+              <h3><a href="#.">Black sack bag</a></h3>
             </div>
           </div>
         </article>
@@ -553,8 +569,8 @@
         <article class="portfolio-item pf-notebooks">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/notebook_1.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">grey and white notebook</a></h3>
             </div>
           </div>
         </article>
@@ -563,8 +579,8 @@
         <article class="portfolio-item pf-notebooks">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/notebook_2.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">grey and black notebook</a></h3>
             </div>
           </div>
         </article>
@@ -573,8 +589,8 @@
         <article class="portfolio-item pf-stickers">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/sticker_1.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">black sticker</a></h3>
             </div>
           </div>
         </article>
@@ -583,8 +599,8 @@
         <article class="portfolio-item pf-stickers">
           <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/sticker_2.png"> </a> </div>
           <div class="portfolio-overlay">
-            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
-              <h3><a href="#.">Crossfit : 15.4 Open Workout</a></h3>
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">white sticker</a></h3>
             </div>
           </div>
         </article>
@@ -598,8 +614,8 @@
         <!-- Main Heading -->
         <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
           <h3>About Us</h3>
-          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/hammers.png" alt="Divider Icon Image"/></div>
-          <span>Our Mission We build Amazing Website</span> </div>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+          <span>Our Mission, Vision and Values</span> </div>
         
         <!-- Why Choose Us  ROW-->
         <div class="row">
@@ -607,12 +623,12 @@
             
             <!-- Tittle -->
             <div class="heading-block margin-bottom-20"> <span class="margin-bottom-10">We deliver High Quality Services</span>
-              <h4>Ultra services &amp; best support</h4>
+              <h4>How are we?</h4>
             </div>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+            <p>We are a group of teenage entrepreneurs creating an organization that will mainly focus on raising awareness on sexusal assaults and creating a strong and united front that will help reduce the problem and hopefully ending it.</p>
             <div class="ultra-ser">
               <hr>
-              <span><span class="name"> John Doe &nbsp; - &nbsp;</span> <span>Ceo/Founder Zap</span></span> </div>
+              <span><span class="name"></span> <span></span></span> </div>
           </div>
           
           <!-- Image -->
@@ -627,8 +643,8 @@
             <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
               <div class="ib-icon"> <i class="fa fa-paper-plane-o"></i> </div>
               <div class="ib-info">
-                <h4 class="h6">Trending</h4>
-                <p>Contrary to popular belief , Lorem Ipsum is not simply random text. It has roots in a piece</p>
+                <h4 class="h6">Mission</h4>
+                <p>Our movement aim is to create a strong and united front of people who want the sexual assault phenomena to end. We want to encourage victims to share their own stories and ask our supporters to participate in rallies, that would raise awareness to the subject. </p>
               </div>
             </div>
           </div>
@@ -636,10 +652,10 @@
           <!-- Services -->
           <div class="col-md-4 animate fadeInUp" data-wow-delay="0.6s">
             <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
-              <div class="ib-icon"> <i class="fa fa-tencent-weibo"></i> </div>
+              <div class="ib-icon"> <i class="fa fa-moon-o"></i> </div>
               <div class="ib-info">
-                <h4 class="h6">Smart Setting</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem not simply random accusantium</p>
+                <h4 class="h6">Vision</h4>
+                <p>We envision everyone in our region would feel safe, take ownership of their own body and feel secure that people would respect them. </p>
               </div>
             </div>
           </div>
@@ -647,81 +663,57 @@
           <!-- Services -->
           <div class="col-md-4 margin-bottom-30 animate fadeInUp" data-wow-delay="0.8s">
             <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
-              <div class="ib-icon"> <i class="fa fa-sliders"></i> </div>
-              <div class="ib-info">
-                <h4 class="h6">Powerful Admin</h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Services -->
-          <div class="col-md-4 animate fadeInUp" data-wow-delay="0.4s">
-            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-31">
-              <div class="ib-icon"> <i class="fa fa-moon-o"></i> </div>
-              <div class="ib-info">
-                <h4 class="h6">Sleeping Mode</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Services -->
-          <div class="col-md-4 animate fadeInUp" data-wow-delay="0.6s">
-            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-31">
               <div class="ib-icon"> <i class="fa fa-heart-o"></i> </div>
               <div class="ib-info">
-                <h4 class="h6">User Friendly</h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece</p>
+                <h4 class="h6">Values</h4>
+                <p>Awarness, Inspiration, Sharing, Safety, Support</p>
               </div>
             </div>
           </div>
           
-          <!-- Services -->
-          <div class="col-md-4 animate fadeInUp" data-wow-delay="0.8s">
-            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-31">
-              <div class="ib-icon"> <i class="fa fa-hdd-o"></i> </div>
-              <div class="ib-info">
-                <h4 class="h6">Auto Backup</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
     
     <!-- FACTS -->
-    <section class="facts padding-top-90 padding-bottom-90" style="background-image: url('../static/images/fact/bg-parallax-1.png')">
+    <section class="facts padding-top-90 padding-bottom-90" style="background-image: url('../static/images/fact/stop.jpeg')">
       <div class="container">
         <div class="row counter"> 
           <!-- Team Member -->
           <div class="col-md-3 margin-bottom-30 animate fadeInLeft" data-wow-delay="0.4s">
-            <div class="c-style-4 c-text-white"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="100" data-to="35" data-from="0">35</span> </span>
-              <h5>Team Member</h5>
+            <div class="c-style-4 c-text-white"> <p style="color:#fff; font-size:50px;">1 in 3</p><br>
+              <h5>women is sexually assaulted during her lifetime</h5>
             </div>
           </div>
           
           <!-- Line Of Codes -->
           <div class="col-md-3 margin-bottom-30 animate fadeInLeft" data-wow-delay="0.8s">
-            <div class="counter c-style-4 c-text-white"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="100" data-to="5225" data-from="0">5225</span> </span>
-              <h5>Line Of Codes</h5>
+            <div class="counter c-style-4 c-text-white"> <p style="color:#fff; font-size:50px;">1 in 6</p><br>
+              <h5>boys experience sexual assault</h5><br>
             </div>
           </div>
           
           <!-- Satisfied Client -->
           <div class="col-md-3 columns margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
-            <div class="counter c-style-4 c-text-white"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="100" data-to="4977" data-from="0">4977</span> </span>
-              <h5>Satisfied Client</h5>
+            <div class="counter c-style-4 c-text-white"> <p style="color:#fff; font-size:50px;">98%</p><br>
+              <h5>of rapists never see jail</h5><br>
+            </div>
+          </div>
+
+          <div class="col-md-3 columns margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="counter c-style-4 c-text-white"> <p style="color:#fff; font-size:50px;">every 107</p><br>
+              <h5>seconds a sexual assualt occurs</h5><br>
             </div>
           </div>
           
-          <!-- PSD file included -->
+          <!-- PSD file included 
           <div class="col-md-3 columns margin-bottom-30 animate fadeInRight" data-wow-delay="0.8s">
             <div class="counter c-style-4 c-text-white"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="100" data-to="178" data-from="0">178</span> </span>
               <h5>PSD file included</h5>
             </div>
           </div>
+          -->
         </div>
       </div>
     </section>
@@ -734,7 +726,7 @@
         <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
           <h3>Meet Our Team</h3>
           <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
-          <span>We Make Beautiful Template</span> </div>
+          <span>Israelis and Palastinian</span> </div>
         
         <!-- Team Row -->
         <div class="row margin-bottom-20"> 
@@ -840,7 +832,7 @@
             </div>
           </div>
         </div>
-        <!-- Team Member -->
+        <!-- Team Member 
         <div class="row margin-bottom-80 animate fadeInUp" data-wow-delay="0.4s">
           <div class="col-md-8">
             <h4 class="text-uppercase margin-bottom-25">Are you crazy man ?</h4>
@@ -849,6 +841,7 @@
           <div class="col-md-4 padding-top-40 large-text-right animate fadeInRight" data-wow-delay="0.4s"> <a href="#." class="btn btn-x-large dark-border right">Join With Us</a> </div>
         </div>
       </div>
+      -->
     </section>
     
     <!-- Testimonial -->
@@ -897,8 +890,8 @@
     <!-- Promo -->
     <section class="promo dark">
       <div class="container">
-        <h3 class="font-crimson text-white font-italic animate fadeInLeft" data-wow-delay="0.4s">Looking for a <span class="text-color-primary"> quality and affordable </span> for your next project?</h3>
-        <a href="#." class="btn btn-color btn-med animate fadeInRight" data-wow-delay="0.4s">GET A QUOTE</a> </div>
+        <h3 class="font-crimson text-white font-italic animate fadeInLeft" data-wow-delay="0.4s">Want to read <span class="text-color-primary"> more stories </span> of sexual assualt survivors?</h3>
+        <a href="/stories" class="btn btn-color btn-med animate fadeInRight" data-wow-delay="0.4s">STORIES</a> </div>
     </section>
     
     <!-- Blog -->
@@ -961,16 +954,30 @@
         
         <!-- Heading Blog -->
         <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
-          <h3>Pricing &amp; Plans</h3>
-          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/hammers.png" alt="Divider Icon Image"/></div>
+          <h3>Lecturs</h3>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+
           <span>Get Your Plans for Work</span> </div>
+          <div class="row">
+            <div class="col-md-6">
+          <div style="width:500px; font-size:15px;">
+          <p>As inspiration is one of our core values, we can achieve this through several ways such as creating and giving lectures in schools. The objective of this feature is to raise awareness and educate students about this topic.
+          <br>
+          <br>
+          If you would like us to come and do a lecture in your school- contact us. </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <img style="width:500px;" src="../static/images/gallary/15.jpeg ">
+        </div>
+      </div>
         
-        <!-- Pricing Table Row -->
+        <!-- Pricing Table Row 
         <div class="text-center">
           <h5 class="text-uppercase margin-bottom-65">Register now <span class="font-crimson">Or</span> try it free for 30 days</h5>
         </div>
-        <div class="row"> 
-          <!-- Basic Plan -->
+        <div class="row"> -->
+          <!-- Basic Plan 
           <div class="col-md-3 margin-bottom-30 animate fadeInLeft" data-wow-delay="0.4s">
             <ul class="pricing-table style-1 hover-up hover-shadow">
               <li class="title">Basic Plan</li>
@@ -983,9 +990,9 @@
               <li class="price"><span class="currency">$</span>185<span class="period">monthy</span></li>
               <li class="cta-button"><a class="btn dark"  href="#.">Get Plan</a></li>
             </ul>
-          </div>
+          </div>-->
           
-          <!-- Business Plan -->
+          <!-- Business Plan 
           <div class="col-md-3 margin-bottom-30 animate fadeInLeft" data-wow-delay="0.6s">
             <ul class="pricing-table style-1 hover-up hover-shadow">
               <li class="title">Business Plan</li>
@@ -998,9 +1005,9 @@
               <li class="price"><span class="currency">$</span>235<span class="period">monthy</span></li>
               <li class="cta-button"><a class="btn dark"  href="#.">Get Plan</a></li>
             </ul>
-          </div>
+          </div>-->
           
-          <!-- Premium Plan -->
+          <!-- Premium Plan 
           <div class="col-md-3 margin-bottom-30 animate fadeInRight" data-wow-delay="0.8s">
             <ul class="pricing-table style-1 hover-up hover-shadow">
               <li class="title">Premium Plan</li>
@@ -1013,9 +1020,9 @@
               <li class="price"><span class="currency">$</span>185<span class="period">monthy</span></li>
               <li class="cta-button"><a class="btn dark"  href="#.">Get Plan</a></li>
             </ul>
-          </div>
+          </div>-->
           
-          <!-- Ultimate Plan -->
+          <!-- Ultimate Plan 
           <div class="col-md-3 margin-bottom-30 animate fadeInRight" data-wow-delay="1s">
             <ul class="pricing-table style-1 hover-up hover-shadow">
               <li class="title">Ultimate Plan</li>
@@ -1031,7 +1038,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     
     <!-- Contact Us -->
     <section id="contact" class="contact padding-top-90">
@@ -1040,12 +1047,12 @@
         <!-- Main Heading  -->
         <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
           <h3>Get In Touch</h3>
-          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/hammers.png" alt="Divider Icon Image"/></div>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
           <span>Suport Fast &amp; Pro 24/7</span> </div>
       </div>
       
       <!-- Contact  -->
-      <div class="padding-top-80 padding-bottom-80 bg-parallax" style="background-image: url('../static/images/contact/contact-1.png')">
+      <div class="padding-top-80 padding-bottom-80 bg-parallax" style="background-image: url('../static/images/contact/con.jpg')">
         <div class="container">
           <div class="row"> 
             
@@ -1077,19 +1084,19 @@
               <div class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-large">
                 <div class="ib-icon"> <i class="fa fa-envelope-o text-primary"></i> </div>
                 <div class="ib-info">
-                  <p class="no-margin-bottom"><a href="#." class="text-white">support@yourcompany.com</a></p>
+                  <p class="no-margin-bottom"><a href="#." class="text-white">shout.out.strong@gmail.com</a></p>
                 </div>
               </div>
             </div>
             
-            <!-- Form  -->
+            <!-- Form  
             <div class="col-md-12 margin-top-50 animate fadeInUp" data-wow-delay="0.4s">
-              <div class="contact-form"> 
+              <div class="contact-form"> -->
                 
-                <!-- Success Msg -->
-                <div id="contact_message" class="success-msg animated fadeInUp"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
+                <!-- Success Msg 
+                <div id="contact_message" class="success-msg animated fadeInUp"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>-->
                 
-                <!-- FORM -->
+                <!-- FORM 
                 <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
                   <ul class="row">
                     <li class="col-sm-4">
@@ -1116,7 +1123,7 @@
                       <button type="submit" value="submit" id="btn_submit" onClick="proceed();">SEND ME</button>
                     </li>
                   </ul>
-                </form>
+                </form>-->
               </div>
             </div>
           </div>
@@ -1207,7 +1214,7 @@
               <!-- Instagram Widget Block -->
               <div class="col-md-3">
                 <div class="block block-instagram-widget">
-                  <h3 class="block-title"><span>Instagram</span></h3>
+                  <a class="block-title" href="https://www.instagram.com/shout.out.strong/"><span >Instagram</span></a>
                   <ul >
                     <li> <a href="https://www.instagram.com/p/Bz-sJCUgl81/"> <img src="../static/images/footer/footer_instagram_01.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
                     <li> <a href="https://www.instagram.com/p/B0ON7-PArsT/"> <img src="../static/images/footer/footer_instagram_02.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
