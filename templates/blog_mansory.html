@@ -8,26 +8,26 @@
 <title>ZAP | The Multi-Purpose HTML5 Template</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
 
 <!-- FontsOnline -->
 <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- StyleSheets -->
-<link rel="stylesheet" href="css/ionicons.min.css">
-<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="../static/css/ionicons.min.css">
+<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
 
 <!-- COLORS -->
-<link rel="stylesheet" id="color" href="css/default.css">
+<link rel="stylesheet" id="color" href="../static/css/default.css">
 
 <!-- JavaScripts -->
-<script src="js/vendors/modernizr.js"></script>
+<script src="../static/js/vendors/modernizr.js"></script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -37,9 +37,9 @@
 </head>
 <body>
 <!-- LOADER ===========================================-->
-<div id="loader">
+<!-- <div id="loader">
   <div class="loader">
-    <div class="position-center-center"> <img src="images/logo-dark.png" alt="">      
+    <div class="position-center-center"> <img src="../static/images/logo-dark.png" alt="">      
       <p class="font-crimson text-center">Please Wait...</p>
       <div class="loading">
       	<div class="ball"></div>
@@ -48,7 +48,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Page Wrapper -->
 <div id="wrap"> 
@@ -57,7 +57,7 @@
   <header class="header">
     <div class="sticky">
       <div class="container">
-        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt=""></a> </div>
+        <div class="logo"> <a href="index.html"><img src="../static/images/logo.png" alt=""></a> </div>
         
         <!-- Nav -->
         <nav>
@@ -306,7 +306,7 @@
     <section class="sub-banner animated fadeIn" style="background:url(images/bg/blog-bg-1.jpg) fixed no-repeat">
       <div class="container">
         <div class="position-center-center">
-          <h2>BLOG MANSORY</h2>
+          <h2>Stories</h2>
           
           <!--======= Breadcrumb =========-->
           <ol class="breadcrumb">
@@ -327,13 +327,12 @@
           <div class="row"> 
             
             <!-- BLOG POST -->
+            {% for story in result %}
             <div class="col-md-4 item-mas animate fadeInUp" data-wow-delay="0.2s">
               <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-1.jpg" alt=""> </div>
                 
                 <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Faster Response Time with Reverse 
-                Proxy Cache </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
+                <a href="stories/{{story.id}}" class="tittle-post">{{story.title}}</a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
                 <ul class="post-info">
                   <li> <i class="fa fa-comments-o"></i>97 </li>
                   <li> <i class="fa fa-eye"></i>565 </li>
@@ -343,158 +342,9 @@
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                 <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
             </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas animate fadeInUp" data-wow-delay="0.4s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-2.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Hello Itaewon Project </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas animate fadeInUp" data-wow-delay="0.6s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-3.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Simple HTTP Server in NodeJS</a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST Slider -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.2s">
-              <article class="blog-post">
-                <div class="post-img"> 
-                  
-                  <!-- Img Slider -->
-                  <ul class="testi-slide-2">
-                    <li><img src="images/blog/3/img-5.jpg" alt=""> </li>
-                    <li><img src="images/blog/3/img-5.jpg" alt=""> </li>
-                    <li><img src="images/blog/3/img-5.jpg" alt=""> </li>
-                  </ul>
-                </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Standard post with Video </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.4s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-4.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Standard post with Slider </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.6s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-6.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Remix Audio </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.2s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-8.jpg" alt="">
-                  <div class="position-center-center widh-100"> <a href="#." class="font-crimson text-white font-16px font-italic">https://download.unsplash.com/photo-1434235017538-99f45ef0b451</a> </div>
-                </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Standard post with link </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.4s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-9.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Caroline Sleeper </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-            
-            <!-- BLOG POST -->
-            <div class="col-md-4 item-mas margin-top-30 animate fadeInUp" data-wow-delay="0.6s">
-              <article class="blog-post">
-                <div class="post-img"> <img src="images/blog/3/img-10.jpg" alt=""> </div>
-                
-                <!-- BLOG DETAIL --> 
-                <a href="#." class="tittle-post"> Keenan Loo </a> <span class="post-bt">by <span class="text-color-primary">Natasha</span></span>
-                <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
-                  <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">27 JAN</span> </li>
-                </ul>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</div>
-<!-- End Content --> 
+          {% endfor %}
+
+
 
 <!-- Footer -->
 <footer id="footer">
@@ -511,7 +361,7 @@
                 <h3 class="block-title no-underline"><span class="text-primary">Creative Agency from London - UK</span></h3>
                 <div class="block-content">
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <img class="footer-logo" src="images/footer/footer_logo_1.png" alt="" /> </div>
+                  <img class="footer-logo" src="../static/images/footer/footer_logo_1.png" alt="" /> </div>
               </div>
             </div>
             <!-- End About Block --> 
@@ -557,12 +407,12 @@
               <div class="block block-instagram-widget">
                 <h3 class="block-title"><span>Instagram Widget</span></h3>
                 <ul>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_01.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_02.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_03.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_04.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_05.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
-                  <li> <a href="#.."> <img src="images/footer/footer_instagram_06.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_01.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_02.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_03.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_04.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_05.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
+                  <li> <a href="#.."> <img src="../static/images/footer/footer_instagram_06.png" alt="" /> <span class="overlay"><i class="fa fa-search"></i></span> </a> </li>
                 </ul>
               </div>
             </div>
@@ -639,21 +489,21 @@
 </div>
 
 <!-- JavaScripts --> 
-<script src="js/vendors/jquery/jquery.min.js"></script> 
-<script src="js/vendors/wow.min.js"></script> 
-<script src="js/vendors/bootstrap.min.js"></script> 
-<script src="js/vendors/own-menu.js"></script> 
-<script src="js/vendors/flexslider/jquery.flexslider-min.js"></script> 
-<script src="js/vendors/jquery.countTo.js"></script> 
-<script src="js/vendors/jquery.isotope.min.js"></script> 
-<script src="js/vendors/jquery.bxslider.min.js"></script> 
-<script src="js/vendors/owl.carousel.min.js"></script> 
-<script src="js/vendors/jquery.sticky.js"></script> 
-<script src="js/vendors/color-switcher.js"></script>
+<script src="../static/js/vendors/jquery/jquery.min.js"></script> 
+<script src="../static/js/vendors/wow.min.js"></script> 
+<script src="../static/js/vendors/bootstrap.min.js"></script> 
+<script src="../static/js/vendors/own-menu.js"></script> 
+<script src="../static/js/vendors/flexslider/jquery.flexslider-min.js"></script> 
+<script src="../static/js/vendors/jquery.countTo.js"></script> 
+<script src="../static/js/vendors/jquery.isotope.min.js"></script> 
+<script src="../static/js/vendors/jquery.bxslider.min.js"></script> 
+<script src="../static/js/vendors/owl.carousel.min.js"></script> 
+<script src="../static/js/vendors/jquery.sticky.js"></script> 
+<script src="../static/js/vendors/color-switcher.js"></script>
 
 <!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
 <script src="js/zap.js"></script>
 <script type="text/javascript">
 /*-----------------------------------------------------------------------------------*/

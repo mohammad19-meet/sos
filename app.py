@@ -42,10 +42,10 @@ def stories():
     story = cur.fetchall()
 
     if result > 0:
-        return render_template('articles.html', story=story)
+        return render_template('blog_mansory.html', story=story)
     else:
         msg = 'No stories Found'
-        return render_template('articles.html', msg=msg)
+        return render_template('blog_mansory.html', msg=msg)
     # Close connection
     cur.close()
 
@@ -61,7 +61,7 @@ def article(id):
 
     story = cur.fetchone()
 
-    return render_template('article.html', story=story)
+    return render_template('blog_details.html', story=story)
 
 
 # Register Form Class
