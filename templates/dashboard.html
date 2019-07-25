@@ -1,8 +1,147 @@
-{% extends 'layout.html' %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="M_Adnan" />
+<!-- Document Title -->
+<title>SOS | Shout Out Strong</title>
 
-{% block body %}
-  <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
-  <a class="btn btn-success" href="/add_story"> Add Story</a>
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- FontsOnline -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="../static/css/ionicons.min.css">
+<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="../static/rs-plugin/css/settings.css" media="screen" />
+
+<!-- COLORS -->
+<link rel="stylesheet" id="color" href="../static/css/default.css">
+
+<!-- JavaScripts -->
+<script src="../static/js/vendors/modernizr.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<!-- Page Wrapper -->
+<div id="wrap"> 
+  
+  <!-- Header -->
+  <header class="header single-pages" style="background-color: #999999;">
+    <div class="sticky dark-header" >
+      <div class="container">
+        <div class="logo"> <a href="/"><img src="../static/images/logo.png" alt=""></a> </div>
+        
+        <!-- Nav -->
+        <nav>
+          <ul id="ownmenu" class="ownmenu">
+            <li ><a href="/">HOME</a></li>
+            <li ><a href="/about">About Us</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/solution">Lectures</a></li>
+            <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
+            <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="scroll"><a href="#services">services</a></li>
+            <li class="scroll"><a href="#team">TEAM</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#price">price</a></li>
+            <li class="scroll"><a href="#contact">CONTACT</a></li> -->
+            {% if session.logged_in %}
+            <li class="scroll active"><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/register">Register</a></li>
+            <li ><a href="/login">Login</a></li>
+            {% endif %}
+            <!-- <li><a href="index.html">Pages</a>  -->
+              <!--======= MEGA MENU =========-->
+              <!-- <div class="megamenu full-width animated-3s fadeInUp">
+                <div class="row nav-post">
+                  <div class="col-sm-3">
+                    <h6>INTERACTIVE ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_accordion.html"> Accordion</a></li>
+                      <li><a href="element_buttons.html"> Buttons</a></li>
+                      <li><a href="element_call_out.html"> Call Out</a></li>
+                      <li><a href="element_counter.html"> Counter</a></li>
+                      <li><a href="element_fact.html"> Facts</a></li>
+                      <li><a href="element_icons.html">Icons</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>COMMON ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_our_teams.html"> Our Team</a></li>
+                      <li><a href="element_pricing_table.html"> Pricing Table</a></li>
+                      <li><a href="element_progress_bar.html"> Progress Bar</a></li>
+                      <li><a href="element_testimonials.html"> Testimonials</a></li>
+                      <li><a href="element_typography.html"> Typography</a></li>
+                      <li><a href="element_work_process.html"> Work Process</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>HOME PAGES</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="main_coporate_1.html">Index Coporate</a></li>
+                      <li><a href="main_creative_2.html">Index 2</a></li>
+                      <li><a href="main_creative_3.html">Index 3</a></li>
+                      <li><a href="main_creative_4.html">Index 4</a></li>
+                      <li><a href="main_creative_5.html">Index 5</a></li>
+                      <li><a href="main_creative_6.html">Index 6</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>OTHER</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="portfolio_2.html">PORTFOLIO 01 Full 4 Col</a></li>
+                      <li><a href="portfolio_3.html">PORTFOLIO 02 MANSORY</a></li>
+                      <li><a href="portfolio_4.html">PORTFOLIO 03 </a></li>
+                      <li><a href="portfolio_5.html">Portfolio 04</a></li>
+                      <li><a href="portfolio_detail_1.html">Portfolio Detail 02</a></li>
+                      <li><a href="portfolio_detail_2.html">Portfolio Detail 02</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Header --> 
+  <div class="">
+      {% include 'includes/_messages.html' %}
+  </div>
+  <div class="container" style="margin-left:30px;">
+  <h1 style="margin-top: 200px;">Dashboard <small> Welcome {{session.username}}</small></h1>
+  <a class="btn btn-defult" href="/add_story"> Add Story</a>
   <hr>
   <table class="table table-striped">
     <tr>
@@ -29,4 +168,24 @@
       </tr>
     {% endfor %}
   </table>
-{% endblock %}
+</div>
+</div>
+<!-- JavaScripts --> 
+<script src="../static/js/vendors/jquery/jquery.min.js"></script> 
+<script src="../static/js/vendors/wow.min.js"></script> 
+<script src="../static/js/vendors/bootstrap.min.js"></script> 
+<script src="../static/js/vendors/own-menu.js"></script> 
+<script src="../static/js/vendors/flexslider/jquery.flexslider-min.js"></script> 
+<script src="../static/js/vendors/jquery.countTo.js"></script> 
+<script src="../static/js/vendors/jquery.isotope.min.js"></script> 
+<script src="../static/js/vendors/jquery.bxslider.min.js"></script> 
+<script src="../static/js/vendors/owl.carousel.min.js"></script> 
+<script src="../static/js/vendors/jquery.sticky.js"></script> 
+<script src="../static/js/vendors/color-switcher.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="../static/js/zap.js"></script>
+</body>
+</html>

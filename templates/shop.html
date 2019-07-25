@@ -1,0 +1,310 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="M_Adnan" />
+<!-- Document Title -->
+<title>SOS | Shout Out Strong</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- FontsOnline -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="../static/css/ionicons.min.css">
+<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="../static/rs-plugin/css/settings.css" media="screen" />
+
+<!-- COLORS -->
+<link rel="stylesheet" id="color" href="../static/css/default.css">
+
+<!-- JavaScripts -->
+<script src="../static/js/vendors/modernizr.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<!-- Page Wrapper -->
+<div id="wrap"> 
+  
+  <!-- Header -->
+  <header class="header single-pages" style="background-color: #999999;">
+    <div class="sticky dark-header" >
+      <div class="container">
+        <div class="logo"> <a href="/"><img src="../static/images/logo.png" alt=""></a> </div>
+        
+        <!-- Nav -->
+        <nav>
+          <ul id="ownmenu" class="ownmenu">
+            <li ><a href="/">HOME</a></li>
+            <li ><a href="/about">About Us</a></li>
+            <li class="scroll active"><a href="/shop">Shop</a></li>
+            <li  ><a href="/solution">Lectures</a></li>
+            <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
+            <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="scroll"><a href="#services">services</a></li>
+            <li class="scroll"><a href="#team">TEAM</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#price">price</a></li>
+            <li class="scroll"><a href="#contact">CONTACT</a></li> -->
+            {% if session.logged_in %}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+            <!-- <li><a href="index.html">Pages</a>  -->
+              <!--======= MEGA MENU =========-->
+              <!-- <div class="megamenu full-width animated-3s fadeInUp">
+                <div class="row nav-post">
+                  <div class="col-sm-3">
+                    <h6>INTERACTIVE ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_accordion.html"> Accordion</a></li>
+                      <li><a href="element_buttons.html"> Buttons</a></li>
+                      <li><a href="element_call_out.html"> Call Out</a></li>
+                      <li><a href="element_counter.html"> Counter</a></li>
+                      <li><a href="element_fact.html"> Facts</a></li>
+                      <li><a href="element_icons.html">Icons</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>COMMON ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_our_teams.html"> Our Team</a></li>
+                      <li><a href="element_pricing_table.html"> Pricing Table</a></li>
+                      <li><a href="element_progress_bar.html"> Progress Bar</a></li>
+                      <li><a href="element_testimonials.html"> Testimonials</a></li>
+                      <li><a href="element_typography.html"> Typography</a></li>
+                      <li><a href="element_work_process.html"> Work Process</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>HOME PAGES</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="main_coporate_1.html">Index Coporate</a></li>
+                      <li><a href="main_creative_2.html">Index 2</a></li>
+                      <li><a href="main_creative_3.html">Index 3</a></li>
+                      <li><a href="main_creative_4.html">Index 4</a></li>
+                      <li><a href="main_creative_5.html">Index 5</a></li>
+                      <li><a href="main_creative_6.html">Index 6</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>OTHER</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="portfolio_2.html">PORTFOLIO 01 Full 4 Col</a></li>
+                      <li><a href="portfolio_3.html">PORTFOLIO 02 MANSORY</a></li>
+                      <li><a href="portfolio_4.html">PORTFOLIO 03 </a></li>
+                      <li><a href="portfolio_5.html">Portfolio 04</a></li>
+                      <li><a href="portfolio_detail_1.html">Portfolio Detail 02</a></li>
+                      <li><a href="portfolio_detail_2.html">Portfolio Detail 02</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Header --> 
+      <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio port-wrap padding-top-80">
+      <div class="container" style="margin-top:80px;"> 
+        <!-- MAIN HEADING -->
+        <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
+          <h3>Our Products</h3>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+          <!-- <span>Show Amazing Your Works</span>  -->
+        </div>
+        
+        <!-- Work Filter -->
+        <ul class="tabs portfolio-filter text-center margin-bottom-80 animate fadeInUp" data-wow-delay="0.4s">
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-sweater">Sweaters</a></li>
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-pins">Pins</a></li>
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-bottles">Bottles</a></li>
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-bags">Bags</a></li>
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-notebooks">Notebooks</a></li>
+          <li class="tab-title filter-item"><a href="#." data-filter=".pf-stickers">Stickers</a></li>
+          <li class="tab-title filter-item"><a class="active" href="#." data-filter="*">All</a></li>
+        </ul>
+      </div>
+      
+      <!-- PORTFOLIO ITEMS -->
+      <div class="items row col-4 animate fadeInUp" data-wow-delay="0.4s"> 
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-sweater">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/hoodie.jpg"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
+              <h3><a href="#.">Blue sweater</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-sweater">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/hoodiee.jpeg"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
+              <h3><a href="#.">Grey sweater</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-pins">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/white_pin.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">White metal pin</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-web-design pf-pins">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/black_pin.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Black metal pin</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-bottles">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bottle_1.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Silver metal bottle</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-bottles">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bottle_2.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">Black metal bottle</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-bags">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bag_1.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
+              <h3><a href="#.">White sack bag</a></h3>
+            </div>
+          </div>
+        </article>
+        
+        <!-- ITEM -->
+        <article class="portfolio-item pf-bags">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/bag_2.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Fashion</a></span>
+              <h3><a href="#.">Black sack bag</a></h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="portfolio-item pf-notebooks">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/notebook_1.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">grey and white notebook</a></h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="portfolio-item pf-notebooks">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/notebook_2.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">grey and black notebook</a></h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="portfolio-item pf-stickers">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/sticker_1.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">black sticker</a></h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="portfolio-item pf-stickers">
+          <div class="portfolio-image"> <a href="#."> <img alt="Open Imagination" src="../static/images/portfolio/1/sticker_2.png"> </a> </div>
+          <div class="portfolio-overlay">
+            <div class="position-center-center"> <span><a href="#.">Accessories</a></span>
+              <h3><a href="#.">white sticker</a></h3>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+  <style>
+    body{
+      background-color: grey;
+    }
+  </style>
+  <!-- JavaScripts --> 
+<script src="../static/js/vendors/jquery/jquery.min.js"></script> 
+<script src="../static/js/vendors/wow.min.js"></script> 
+<script src="../static/js/vendors/bootstrap.min.js"></script> 
+<script src="../static/js/vendors/own-menu.js"></script> 
+<script src="../static/js/vendors/flexslider/jquery.flexslider-min.js"></script> 
+<script src="../static/js/vendors/jquery.countTo.js"></script> 
+<script src="../static/js/vendors/jquery.isotope.min.js"></script> 
+<script src="../static/js/vendors/jquery.bxslider.min.js"></script> 
+<script src="../static/js/vendors/owl.carousel.min.js"></script> 
+<script src="../static/js/vendors/jquery.sticky.js"></script> 
+<script src="../static/js/vendors/color-switcher.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="../static/js/zap.js"></script>
+</body>
+</html>
+    

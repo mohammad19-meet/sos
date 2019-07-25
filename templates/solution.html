@@ -60,7 +60,7 @@
             <li ><a href="/">HOME</a></li>
             <li ><a href="/about">About Us</a></li>
             <li><a href="/shop">Shop</a></li>
-            <li><a href="/solution">Lectures</a></li>
+            <li  class="scroll active"><a href="/solution">Lectures</a></li>
             <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
             <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
             <li class="scroll"><a href="#services">services</a></li>
@@ -73,7 +73,7 @@
             <li><a href="/logout">Logout</a></li>
             {% else %}
             <li><a href="/register">Register</a></li>
-            <li class="scroll active"><a href="/login">Login</a></li>
+            <li><a href="/login">Login</a></li>
             {% endif %}
             <!-- <li><a href="index.html">Pages</a>  -->
               <!--======= MEGA MENU =========-->
@@ -136,280 +136,33 @@
     </div>
   </header>
   <!-- End Header --> 
-  <div id="log">
-  <div class="">
-      {% include 'includes/_messages.html' %}
-  </div>
-  
-  <div class="login">
-    <div class="container" id="container">
-        <form action="" method="POST">
-          <h1 style="margin-bottom: 20px;">Login to SOS</h1>
-          <!-- <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-          </div> -->
-          <input  type="text" name="username" placeholder="username" class="form-control" value={{request.form.username}} >
-          <input type="password" name="password" class="form-control" placeholder="password" value={{request.form.password}} >
-          <a href="/register">Don't have an account?</a>
-          <input type="submit" value="sign in"a class="btn btn-med btn-color" >
-        </form>
-    </div>
-  </div>
+      <section id="price" class="pricing padding-bottom-90 padding-top-90">
+      <div class="container" style="margin-top:100px;"> 
+        
+        <!-- Heading Blog -->
+        <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
+          <h3>Lecturs</h3>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+
+          <span>Get Your Plans for Work</span> </div>
+          <div class="row">
+            <div class="col-md-6">
+          <div style="width:500px; font-size:15px;">
+          <p>As inspiration is one of our core values, we can achieve this through several ways such as creating and giving lectures in schools. The objective of this feature is to raise awareness and educate students about this topic.
+          <br>
+          <br>
+          If you would like us to come and do a lecture in your school- contact us.<br>email: shout.out.strong@gmail.com<br> </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <img style="width:500px;" src="../static/images/gallary/15.jpeg ">
+        </div>
+      </div>
+        </div>
+      </section>
+
 </div>
-
-<style>
-    
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-  * {
-    box-sizing: border-box;
-  }
-
-  /* body {
-    background: #f6f5f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
-  } */
-body{
-  background-color: #cccccc;
-}
-  #log{
-    margin-top: 180px;
-  }
-
-  .login h1 {
-    font-weight: bold;
-    margin: 0;
-  }
-
-  .login h2 {
-    text-align: center;
-  }
-
-  .login p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
-  }
-
-  .login span {
-    font-size: 12px;
-  }
-
-  .login a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-  }
-
-  .login button {
-    border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
-
-  .login button:active {
-    transform: scale(0.95);
-  }
-
-  .login button:focus {
-    outline: none;
-  }
-
-  .login button.ghost {
-    background-color: transparent;
-    border-color: #FFFFFF;
-  }
-
-  .login form {
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-    padding: 50px;
-  }
-
-  .login input {
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-  }
-
-  .login .container {
-    background-color: #fff;
-    border-radius: 10px;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-        0 10px 10px rgba(0,0,0,0.22);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 160px;
-  }
-
-  .login .form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-  }
-
-  .login .sign-in-container {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-  }
-
-  .login .container.right-panel-active .sign-in-container {
-    transform: translateX(100%);
-  }
-
-  .login .sign-up-container {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-  }
-
-  .login .container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: show 0.6s;
-  }
-
-  @keyframes show {
-    0%, 49.99% {
-      opacity: 0;
-      z-index: 1;
-    }
-    
-    50%, 100% {
-      opacity: 1;
-      z-index: 5;
-    }
-  }
-
-  .login .overlay-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
-  }
-
-  .login .container.right-panel-active .overlay-container{
-    transform: translateX(-100%);
-  }
-
-  .login .overlay {
-    background: #FF416C;
-    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
-    color: #FFFFFF;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-      transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-  }
-
-  .login .container.right-panel-active .overlay {
-      transform: translateX(50%);
-  }
-
-  .login .overlay-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-  }
-
-  .login .overlay-left {
-    transform: translateX(-20%);
-  }
-
-  .login .container.right-panel-active .overlay-left {
-    transform: translateX(0);
-  }
-
-  .login .overlay-right {
-    right: 0;
-    transform: translateX(0);
-  }
-
-  .login .container.right-panel-active .overlay-right {
-    transform: translateX(20%);
-  }
-
-  .login .social-container {
-    margin: 20px 0;
-  }
-
-  .login .social-container a {
-    border: 1px solid #DDDDDD;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-  }
-
-</style>
-<script>
-  const signUpButton = document.getElementById('signUp');
-  const signInButton = document.getElementById('signIn');
-  const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
-</script>
-  <!-- JavaScripts --> 
+<!-- JavaScripts --> 
 <script src="../static/js/vendors/jquery/jquery.min.js"></script> 
 <script src="../static/js/vendors/wow.min.js"></script> 
 <script src="../static/js/vendors/bootstrap.min.js"></script> 

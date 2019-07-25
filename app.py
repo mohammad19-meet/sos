@@ -29,7 +29,15 @@ def index():
 def about():
     return render_template('about.html')
 
+#Shop
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
 
+#Solution
+@app.route('/solution')
+def solution():
+    return render_template('solution.html')
 # Articles
 @app.route('/stories')
 def stories():

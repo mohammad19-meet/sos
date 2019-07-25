@@ -1,6 +1,352 @@
-{% extends 'layout.html' %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="M_Adnan" />
+<!-- Document Title -->
+<title>SOS | Shout Out Strong</title>
 
-{% block body %}
-  <h1>About Us</h1>
-  <p>Something about SOS and about us.</p>
-{% endblock %}
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- FontsOnline -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="../static/css/ionicons.min.css">
+<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="../static/rs-plugin/css/settings.css" media="screen" />
+
+<!-- COLORS -->
+<link rel="stylesheet" id="color" href="../static/css/default.css">
+
+<!-- JavaScripts -->
+<script src="../static/js/vendors/modernizr.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<!-- Page Wrapper -->
+<div id="wrap"> 
+  
+  <!-- Header -->
+  <header class="header single-pages" style="background-color: #999999;">
+    <div class="sticky dark-header" >
+      <div class="container">
+        <div class="logo"> <a href="/"><img src="../static/images/logo.png" alt=""></a> </div>
+        
+        <!-- Nav -->
+        <nav>
+          <ul id="ownmenu" class="ownmenu">
+            <li ><a href="/">HOME</a></li>
+            <li class="scroll active"><a href="/about">About Us</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/solution">Lectures</a></li>
+            <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
+            <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="scroll"><a href="#services">services</a></li>
+            <li class="scroll"><a href="#team">TEAM</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#price">price</a></li>
+            <li class="scroll"><a href="#contact">CONTACT</a></li> -->
+            {% if session.logged_in %}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+            <!-- <li><a href="index.html">Pages</a>  -->
+              <!--======= MEGA MENU =========-->
+              <!-- <div class="megamenu full-width animated-3s fadeInUp">
+                <div class="row nav-post">
+                  <div class="col-sm-3">
+                    <h6>INTERACTIVE ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_accordion.html"> Accordion</a></li>
+                      <li><a href="element_buttons.html"> Buttons</a></li>
+                      <li><a href="element_call_out.html"> Call Out</a></li>
+                      <li><a href="element_counter.html"> Counter</a></li>
+                      <li><a href="element_fact.html"> Facts</a></li>
+                      <li><a href="element_icons.html">Icons</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>COMMON ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_our_teams.html"> Our Team</a></li>
+                      <li><a href="element_pricing_table.html"> Pricing Table</a></li>
+                      <li><a href="element_progress_bar.html"> Progress Bar</a></li>
+                      <li><a href="element_testimonials.html"> Testimonials</a></li>
+                      <li><a href="element_typography.html"> Typography</a></li>
+                      <li><a href="element_work_process.html"> Work Process</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>HOME PAGES</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="main_coporate_1.html">Index Coporate</a></li>
+                      <li><a href="main_creative_2.html">Index 2</a></li>
+                      <li><a href="main_creative_3.html">Index 3</a></li>
+                      <li><a href="main_creative_4.html">Index 4</a></li>
+                      <li><a href="main_creative_5.html">Index 5</a></li>
+                      <li><a href="main_creative_6.html">Index 6</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>OTHER</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="portfolio_2.html">PORTFOLIO 01 Full 4 Col</a></li>
+                      <li><a href="portfolio_3.html">PORTFOLIO 02 MANSORY</a></li>
+                      <li><a href="portfolio_4.html">PORTFOLIO 03 </a></li>
+                      <li><a href="portfolio_5.html">Portfolio 04</a></li>
+                      <li><a href="portfolio_detail_1.html">Portfolio Detail 02</a></li>
+                      <li><a href="portfolio_detail_2.html">Portfolio Detail 02</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Header --> 
+
+<!-- Why Choose Us -->
+    <section id="services" class="why-choose padding-top-80 padding-bottom-60">
+      <div class="container" style="margin-top:100px;"> 
+        
+        <!-- Main Heading -->
+        <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
+          <h3>About Us</h3>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+          <span>Our Mission, Vision and Values</span> </div>
+        
+        <!-- Why Choose Us  ROW-->
+        <div class="row">
+          <div class="col-md-7 margin-top-50 animate fadeInLeft" data-wow-delay="0.4s"> 
+            
+            <!-- Tittle -->
+            <div class="heading-block margin-bottom-20"> 
+              <h4>Who are we?</h4>
+            </div>
+            <p>We are a group of teenage entrepreneurs creating an organization that will mainly focus on raising awareness on sexusal assaults and creating a strong and united front that will help reduce the problem and hopefully ending it.</p>
+            <div class="ultra-ser">
+              <hr>
+              <span><span class="name"></span> <span></span></span> </div>
+          </div>
+          
+          <!-- Image -->
+          <div class="col-md-5 text-right animate fadeInRight" data-wow-delay="0.4s"> <img class="img-responsive" src="../static/images/why-choose/team.jpeg" alt="Why Choose Us Image" /> </div>
+        </div>
+        
+        <!-- Services ROW -->
+        <div class="row margin-top-60"> 
+          
+          <!-- Services -->
+          <div class="col-md-4 animate fadeInUp" data-wow-delay="0.4s">
+            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
+              <div class="ib-icon"> <i class="fa fa-paper-plane-o"></i> </div>
+              <div class="ib-info">
+                <h4 class="h6">Mission</h4>
+                <p>Our movement aim is to create a strong and united front of people who want the sexual assault phenomena to end. We want to encourage victims to share their own stories and ask our supporters to participate in rallies, that would raise awareness to the subject. </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-4 animate fadeInUp" data-wow-delay="0.6s">
+            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
+              <div class="ib-icon"> <i class="fa fa-moon-o"></i> </div>
+              <div class="ib-info">
+                <h4 class="h6">Vision</h4>
+                <p>We envision everyone in our region would feel safe, take ownership of their own body and feel secure that people would respect them. </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInUp" data-wow-delay="0.8s">
+            <div class="clearfix icon-box ib-style-2 i-large i-top padding-bottom-15 border-bottom-1 border-light">
+              <div class="ib-icon"> <i class="fa fa-heart-o"></i> </div>
+              <div class="ib-info">
+                <h4 class="h6">Values</h4>
+                <p>Awarness, Inspiration, Sharing, Safety, Support</p>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+    <!-- TEAM MEMBER -->
+    <section id="team" class="our-team padding-top-40">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading-block text-center animate fadeInUp" data-wow-delay="0.4s">
+          <h3>Meet Our Team</h3>
+          <div class="divider divider-short divider-center"><img class="i-div" src="../static/images/divider/logo.png" alt="Divider Icon Image"/></div>
+          <span>Israelis and Palastinian</span> </div>
+        
+        <!-- Team Row -->
+        <div class="row margin-bottom-20"> 
+          
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/shelly.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Shelly Beider</a></h4>
+                  <span>Programmer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInLeft" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="Our Team Thumbnail Image" src="../static/images/our-teams/mohammad.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Mohammad Alsharif</a></h4>
+                  <span>Programmer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInUp" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/waseem.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Waseem Lawen</a></h4>
+                  <span>Designer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInUp" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/shira.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Shira Maybruch</a></h4>
+                  <span>Designer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInUp" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/shira.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Tamara Hashimeh</a></h4>
+                  <span>Designer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/rakan.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Rakan Darwish</a></h4>
+                  <span>UXer</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/gilad.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Gilad Schurr</a></h4>
+                  <span>UXer</span> </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/rahaf.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Rahaf sabri</a></h4>
+                  <span>Project Manager</span> </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="col-md-4 margin-bottom-30 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="team style-1">
+              <div class="team-image"> <a href="#."> <img alt="our team thumbnail image" src="../static/images/our-teams/shelly.png"/> </a> </div>
+              <div class="team-desc">
+                <div class="team-title">
+                  <h4><a href="#.">Jawzal Sheikh khalil</a></h4>
+                  <span>Project Manager</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 
+        <div class="row margin-bottom-80 animate fadeInUp" data-wow-delay="0.4s">
+          <div class="col-md-8">
+            <h4 class="text-uppercase margin-bottom-25">Are you crazy man ?</h4>
+            <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"</p>
+          </div>
+          <div class="col-md-4 padding-top-40 large-text-right animate fadeInRight" data-wow-delay="0.4s"> <a href="#." class="btn btn-x-large dark-border right">Join With Us</a> </div>
+        </div>
+      </div>
+      -->
+    </section>
+</div>
+
+<!-- JavaScripts --> 
+<script src="../static/js/vendors/jquery/jquery.min.js"></script> 
+<script src="../static/js/vendors/wow.min.js"></script> 
+<script src="../static/js/vendors/bootstrap.min.js"></script> 
+<script src="../static/js/vendors/own-menu.js"></script> 
+<script src="../static/js/vendors/flexslider/jquery.flexslider-min.js"></script> 
+<script src="../static/js/vendors/jquery.countTo.js"></script> 
+<script src="../static/js/vendors/jquery.isotope.min.js"></script> 
+<script src="../static/js/vendors/jquery.bxslider.min.js"></script> 
+<script src="../static/js/vendors/owl.carousel.min.js"></script> 
+<script src="../static/js/vendors/jquery.sticky.js"></script> 
+<script src="../static/js/vendors/color-switcher.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="../static/js/zap.js"></script>
+</body>
