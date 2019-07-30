@@ -2,9 +2,9 @@
 
 {% block body %}
 
-{{story.title}}
-Written by {{story.author}} on {{story.create_date}}
+<h1>{{story.title}}</h1>
+<p>{{story.create_date}}
 
-{{story.body | safe}}
+{{story.body | safe}}</p>
 
 {% endblock %}

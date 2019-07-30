@@ -46,7 +46,7 @@
 
 
 <!-- Page Wrapper -->
-<div id="wrap"> 
+<div id="wrap" class="wide"> 
   
   <!-- Header -->
   <header class="header single-pages" style="background-color: #999999;">
@@ -58,9 +58,10 @@
         <nav>
           <ul id="ownmenu" class="ownmenu">
             <li ><a href="/">HOME</a></li>
-            <li class="scroll active"><a href="/about">About Us</a></li>
+            <li ><a href="/about">About Us</a></li>
             <li><a href="/shop">Shop</a></li>
             <li><a href="/solution">Lectures</a></li>
+            <li class="scroll active"><a href="/stories">Stories</a></li>
             <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
             <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
             <li class="scroll"><a href="#services">services</a></li>
@@ -145,15 +146,21 @@
           
           <!--======= Breadcrumb =========-->
           <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="active">BLOG</li>
           </ol>
+          {% if session.logged_in %}
+<a href="/add_story" class="btn btn-med btn-color">ADD A STORY</a> 
+
+            {% else %}
+<a href="/login" class="btn btn-med btn-color">ADD A STORY</a> 
+            {% endif %}
         </div>
       </div>
     </section>
     
     <!-- BLOG -->
-    <section class="blog padding-top-80 padding-bottom-80"> 
+    <section  class="blog padding-top-80 padding-bottom-80"> 
       <!-- TITTLE -->
       <div class="container"> 
         
@@ -163,19 +170,20 @@
             
             <!-- BLOG POST -->
           {% for result in story %}
-            <div class="col-md-4 item-mas animate fadeInUp" data-wow-delay="0.2s">
+            <div class="col-md-4 item-mas animate fadeInUp" style=" border-style: solid;
+  border-width: 3px; padding: 10px;" data-wow-delay="0.2s">
               <article class="blog-post">
                 
                 <!-- BLOG DETAIL --> 
-                <a href="stories/{{story.id}}" class="tittle-post">{{story.title}}</a> <span class="post-bt"> <span class="text-color-primary">no one</span></span>
+                <a href="stories/{{result.id}}" class="tittle-post">{{result.title}}</a> <span class="post-bt"> <span class="text-color-primary">anonymous</span></span>
                 <ul class="post-info">
-                  <li> <i class="fa fa-comments-o"></i>97 </li>
+                  <!--<li> <i class="fa fa-comments-o"></i>97 </li>
                   <li> <i class="fa fa-eye"></i>565 </li>
-                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>
-                  <li> <span class="date font-crimson">{{story.create_date}}</span> </li>
+                  <li> <i class="fa fa-bookmark-o"></i>Photography </li>-->
+                  <li> <span style="width: 90px;" class="date font-crimson">{{result.create_date}}</span> </li>
                 </ul>
-                <p>{{story.body}}</p>
-                <a href="#." class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
+                {{clever_function(result.body)}}
+                <a href="/stories/{{result.id}}" class="btn gray-border margin-top-20 text-normal">READMORE</a> </article>
             </div>
           {% endfor %}
 
