@@ -50,13 +50,16 @@ def stories():
     story = cur.fetchall()
 
     if result > 0:
-        return render_template('blog_mansory.html', story=story)
+        return render_template('stories.html', story=story)
     else:
         msg = 'No stories Found'
-        return render_template('blog_mansory.html', msg=msg)
+        return render_template('stories.html', msg=msg)
     # Close connection
     cur.close()
 
+def clever_function(body):
+    body = body[3:25]
+    return body
 
 #Single storie
 @app.route('/stories/<string:id>/')
@@ -280,6 +283,55 @@ def delete_story(id):
 
     return redirect(url_for('dashboard'))
 
+@app.route('/p1')
+def p1():
+    return render_template("product1.html")
+
+@app.route('/p2')
+def p2():
+    return render_template("product2.html")
+
+@app.route('/p3')
+def p3():
+    return render_template("product3.html")
+
+@app.route('/p4')
+def p4():
+    return render_template("product4.html")
+
+@app.route('/p5')
+def p5():
+    return render_template("product5.html")
+
+@app.route('/p6')
+def p6():
+    return render_template("product6.html")
+
+@app.route('/p7')
+def p7():
+    return render_template("product7.html")
+
+@app.route('/p8')
+def p8():
+    return render_template("product8.html")
+
+@app.route('/p9')
+def p9():
+    return render_template("product9.html")
+
+@app.route('/p10')
+def p10():
+    return render_template("product10.html")
+
+@app.route('/p11')
+def p11():
+    return render_template("product11.html")
+
+@app.route('/p12')
+def p12():
+    return render_template("product12.html")
+
+app.jinja_env.globals.update(clever_function=clever_function)
 if __name__ == '__main__':
     app.secret_key='secret123'
     app.run(debug=True)
