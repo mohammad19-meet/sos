@@ -7,11 +7,13 @@ from functools import wraps
 
 app = Flask(__name__)
 
+app.secret_key='aiehfpuehgpugeh9gfep9usgh[wueh'
+
 # Config MySQL
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password'
-app.config['MYSQL_DB'] = 'sos'
+app.config['MYSQL_HOST'] = 'eu-cdbr-west-02.cleardb.net'
+app.config['MYSQL_USER'] = 'b0dcdf545c8c4f'
+app.config['MYSQL_PASSWORD'] = '5f8c4e91'
+app.config['MYSQL_DB'] = 'heroku_1e91302d605fc25'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
@@ -339,5 +341,4 @@ def p12():
 
 app.jinja_env.globals.update(clever_function=clever_function)
 if __name__ == '__main__':
-    app.secret_key='secret123'
     app.run(debug=True)
