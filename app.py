@@ -7,6 +7,8 @@ from functools import wraps
 
 app = Flask(__name__)
 
+app.secret_key='aiehfpuehgpugeh9gfep9usgh[wueh'
+
 # Config MySQL
 app.config['MYSQL_HOST'] = 'eu-cdbr-west-02.cleardb.net'
 app.config['MYSQL_USER'] = 'b0dcdf545c8c4f'
@@ -333,5 +335,4 @@ def p12():
 
 app.jinja_env.globals.update(clever_function=clever_function)
 if __name__ == '__main__':
-    app.secret_key='secret123'
     app.run(debug=True)
