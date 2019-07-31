@@ -283,6 +283,12 @@ def delete_story(id):
 
     return redirect(url_for('dashboard'))
 
+#checkout
+@app.route('/checkout')
+def checkout():
+    return render_template('checkout.html')
+    
+#products
 @app.route('/p1')
 def p1():
     return render_template("product1.html")

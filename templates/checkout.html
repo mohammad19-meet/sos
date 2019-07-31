@@ -1,0 +1,316 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="M_Adnan" />
+<!-- Document Title -->
+<title>SOS | Shout Out Strong</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+
+<!-- FontsOnline -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+<!-- StyleSheets -->
+<link rel="stylesheet" href="../static/css/ionicons.min.css">
+<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="../static/css/responsive.css">
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="../static/rs-plugin/css/settings.css" media="screen" />
+
+<!-- COLORS -->
+<link rel="stylesheet" id="color" href="../static/css/default.css">
+
+<!-- JavaScripts -->
+<script src="../static/js/vendors/modernizr.js"></script>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<!-- Page Wrapper -->
+<div id="wrap"> 
+  
+  <!-- Header -->
+  <header class="header single-pages" style="background-color: #999999;">
+    <div class="sticky dark-header" >
+      <div class="container">
+        <div class="logo"> <a href="/"><img src="../static/images/logo.png" alt=""></a> </div>
+        
+        <!-- Nav -->
+        <nav>
+          <ul id="ownmenu" class="ownmenu">
+            <li ><a href="/">HOME</a></li>
+            <li ><a href="/about">About Us</a></li>
+            <li class="scroll active"><a href="/shop">Shop</a></li>
+            <li ><a href="/solution">Lectures</a></li>
+            <li  ><a href="/stories">Stories</a></li>
+            <!-- <li class="scroll"><a href="#about">ABOUT</a></li>
+            <li class="scroll"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="scroll"><a href="#services">services</a></li>
+            <li class="scroll"><a href="#team">TEAM</a></li>
+            <li class="scroll"><a href="#blog">blog</a></li>
+            <li class="scroll"><a href="#price">price</a></li>
+            <li class="scroll"><a href="#contact">CONTACT</a></li> -->
+            {% if session.logged_in %}
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            {% endif %}
+            <!-- <li><a href="index.html">Pages</a>  -->
+              <!--======= MEGA MENU =========-->
+              <!-- <div class="megamenu full-width animated-3s fadeInUp">
+                <div class="row nav-post">
+                  <div class="col-sm-3">
+                    <h6>INTERACTIVE ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_accordion.html"> Accordion</a></li>
+                      <li><a href="element_buttons.html"> Buttons</a></li>
+                      <li><a href="element_call_out.html"> Call Out</a></li>
+                      <li><a href="element_counter.html"> Counter</a></li>
+                      <li><a href="element_fact.html"> Facts</a></li>
+                      <li><a href="element_icons.html">Icons</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>COMMON ELEMENTS</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="element_our_teams.html"> Our Team</a></li>
+                      <li><a href="element_pricing_table.html"> Pricing Table</a></li>
+                      <li><a href="element_progress_bar.html"> Progress Bar</a></li>
+                      <li><a href="element_testimonials.html"> Testimonials</a></li>
+                      <li><a href="element_typography.html"> Typography</a></li>
+                      <li><a href="element_work_process.html"> Work Process</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>HOME PAGES</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="main_coporate_1.html">Index Coporate</a></li>
+                      <li><a href="main_creative_2.html">Index 2</a></li>
+                      <li><a href="main_creative_3.html">Index 3</a></li>
+                      <li><a href="main_creative_4.html">Index 4</a></li>
+                      <li><a href="main_creative_5.html">Index 5</a></li>
+                      <li><a href="main_creative_6.html">Index 6</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>OTHER</h6>
+                    <hr>
+                    <ul>
+                      <li><a href="portfolio_2.html">PORTFOLIO 01 Full 4 Col</a></li>
+                      <li><a href="portfolio_3.html">PORTFOLIO 02 MANSORY</a></li>
+                      <li><a href="portfolio_4.html">PORTFOLIO 03 </a></li>
+                      <li><a href="portfolio_5.html">Portfolio 04</a></li>
+                      <li><a href="portfolio_detail_1.html">Portfolio Detail 02</a></li>
+                      <li><a href="portfolio_detail_2.html">Portfolio Detail 02</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Header --> 
+  
+  <!-- Content -->
+  <div id="content">
+    <h2 style="text-align: center; margin-top:200px;">SHOPPING CART</h2>
+    
+    <!-- SHOP --> 
+    <!--======= PAGES INNER =========-->
+    <section class="padding-top-80 padding-bottom-80 pages-in chart-page">
+      <div class="container"> 
+        
+        <!-- Payments Steps -->
+        <div class="shopping-cart"> 
+          
+          <!-- SHOPPING INFORMATION -->
+          <div class="cart-ship-info">
+            <div class="row"> 
+              
+              <!-- ESTIMATE SHIPPING & TAX -->
+              <div class="col-sm-7">
+                <h5 class="font-14px margin-bottom-30 letter-space-2">BILLING DETAILS</h5>
+                <form>
+                  <ul class="row">
+                    
+                    <!-- Name -->
+                    <li class="col-md-6">
+                      <label> *FIRST NAME
+                        <input type="text" name="first-name" value="" placeholder="">
+                      </label>
+                    </li>
+                    <!-- LAST NAME -->
+                    <li class="col-md-6">
+                      <label> *LAST NAME
+                        <input type="text" name="last-name" value="" placeholder="">
+                      </label>
+                    </li>
+                    <li class="col-md-12"> 
+                      <!-- COMPANY NAME -->
+                      <label>COMPANY NAME
+                        <input type="text" name="company" value="" placeholder="">
+                      </label>
+                    </li>
+                    <li class="col-md-12"> 
+                      <!-- ADDRESS -->
+                      <label>*ADDRESS
+                        <input type="text" name="address" value="" placeholder="">
+                        <input type="text" name="address" value="" placeholder="Optional">
+                      </label>
+                    </li>
+                    <!-- TOWN/CITY -->
+                    <li class="col-md-12">
+                      <label>*TOWN/CITY
+                        <input type="text" name="town" value="" placeholder="">
+                      </label>
+                    </li>
+                    
+                    <!-- COUNTRY -->
+                    <li class="col-md-6">
+                      <label> COUNTRY
+                        <input type="text" name="contry-state" value="" placeholder="STATE/COUNTRY">
+                      </label>
+                    </li>
+                    
+                    <!-- POSTCODE -->
+                    <li class="col-md-6">
+                      <label> *POSTCODE
+                        <input type="text" name="postal-code" value="" placeholder="POSTCODE/ZIP">
+                      </label>
+                    </li>
+                    
+                    <!-- EMAIL ADDRESS -->
+                    <li class="col-md-6">
+                      <label> *EMAIL ADDRESS
+                        <input type="text" name="contry-state" value="" placeholder="">
+                      </label>
+                    </li>
+                    <!-- PHONE -->
+                    <li class="col-md-6">
+                      <label> *PHONE
+                        <input type="text" name="postal-code" value="" placeholder="">
+                      </label>
+                    </li>
+                    
+                    
+                    <!-- SHIP TO BILLING ADDRESS -->
+                    <li class="col-md-6">
+                      <div class="checkbox">
+                        <input id="checkbox2" class="styled" type="checkbox">
+                        <label for="checkbox2"> SHIP TO BILLING ADDRESS? </label>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+              
+              <!-- SUB TOTAL -->
+              <div class="col-sm-5">
+                <div class="order-place">
+                  <h5>YOUR ORDER</h5>
+                  <div class="order-detail">
+                    <p>PRODUCT <span>TOTAL</span></p>
+                    <div class="item-order">
+                      <p>BLUE SWEATER <span class="color"> x1 </span></p>
+                      <p class="text-right font-crimson font-italic margin-top-20 font-20px">60₪</p>
+                    </div>
+                    <p>CART SUBTOTAL <span class="font-crimson font-italic font-16px">60₪</span></p>
+                    <p>SHIPPING AND HANDLING <span>10₪</span></p>
+                    <p>ORDER TOTAL <span class="font-crimson font-italic font-16px">70₪</span></p>
+                  </div>
+                  <div class="pay-meth">
+                    <h5 class="text-color-primary">PAYMENT METHODS</h5>
+                    <ul>
+                      <li>
+                        <div class="checkbox">
+                          <input id="checkbox3-1" class="styled" type="checkbox">
+                          <label for="checkbox3-1"> DIRECT BANK TRANSFER </label>
+                        </div>
+                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="checkbox3-2" class="styled" type="checkbox">
+                          <label for="checkbox3-2"> CHEQUE PAYMENT </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="checkbox3-3" class="styled" type="checkbox">
+                          <label for="checkbox3-3"> PAYPAL </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <input id="checkbox3-4" class="styled" type="checkbox">
+                          <label for="checkbox3-4"> I’VE READ AND ACCEPT THE <span class="color"> TERMS & CONDITIONS </span> </label>
+                        </div>
+                      </li>
+                    </ul>
+                    <a href="#." class="btn btn-small btn-dark pull-right">PLACE ORDER</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- End Content --> 
+
+
+  
+  <!-- GO TO TOP --> 
+    <a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a> 
+  <!-- GO TO TOP End --> 
+
+<!-- End Page Wrapper -->
+
+
+<!-- JavaScripts --> 
+<script src="js/vendors/jquery/jquery.min.js"></script> 
+<script src="js/vendors/wow.min.js"></script> 
+<script src="js/vendors/bootstrap.min.js"></script> 
+<script src="js/vendors/own-menu.js"></script> 
+<script src="js/vendors/flexslider/jquery.flexslider-min.js"></script> 
+<script src="js/vendors/jquery.countTo.js"></script> 
+<script src="js/vendors/jquery.isotope.min.js"></script> 
+<script src="js/vendors/jquery.bxslider.min.js"></script> 
+<script src="js/vendors/owl.carousel.min.js"></script> 
+<script src="js/vendors/jquery.sticky.js"></script> 
+<script src="js/vendors/color-switcher.js"></script>
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="js/zap.js"></script>
+</body>
+</html>
